@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal"
+    android:background="@color/teal"
+    android:gravity="center">
+
+    <!-- Items Screen Button -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/itemsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Items"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:onClick="openActivityItemsScreen"/>
+    </LinearLayout>
+
+    <!-- Add Items Screen Button -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Items"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:onClick="openActivityAddItemsScreen"/>
+    </LinearLayout>
+
+    <!-- Messages Screen Button -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/messagesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Messages"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:onClick="openActivityMessagesScreen"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,269 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".DetailsActivity">
+
+    <!-- Back Arrow Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="120dp"
+        android:clickable="true"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/chest_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <!-- Divider Bar -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+    </View>
+
+    <!-- Start of Scroll View -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_horizontal">
+
+            <!-- Item Name Header -->
+            <TextView
+                android:id="@+id/itemNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Item Name"
+                android:textSize="18sp"
+                android:textColor="@color/black">
+            </TextView>
+
+            <!-- Enter Item Name Box -->
+            <EditText
+                android:id="@+id/itemNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter item name"
+                android:background="@drawable/rounded_corner"
+                android:padding="12dp"
+                android:layout_marginTop="8dp">
+            </EditText>
+
+            <!-- Item Description Header -->
+            <TextView
+                android:id="@+id/itemDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Item Description"
+                android:textSize="18sp"
+                android:textColor="@color/black">
+            </TextView>
+
+            <!-- Enter Item Description Text Box -->
+            <EditText
+                android:id="@+id/itemDescriptionInput"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Enter item description"
+                android:background="@drawable/rounded_corner"
+                android:padding="12dp"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="8dp">
+            </EditText>
+
+            <!-- Category Header -->
+            <TextView
+                android:id="@+id/categoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Category"
+                android:textSize="18sp"
+                android:textColor="@color/black">
+            </TextView>
+
+            <!-- Enter Category Text Box -->
+            <EditText
+                android:id="@+id/categoryInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter category"
+                android:background="@drawable/rounded_corner"
+                android:padding="12dp"
+                android:layout_marginTop="8dp">
+            </EditText>
+
+            <!-- Quantity Header -->
+            <TextView
+                android:id="@+id/quantityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Quantity"
+                android:textSize="18sp"
+                android:textColor="@color/black">
+            </TextView>
+
+            <!-- add or remove quantity grouping -->
+            <LinearLayout
+                android:id="@+id/quantitySection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Decrease Button -->
+                <Button
+                    android:id="@+id/decreaseButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"
+                    android:clickable="true">
+                </Button>
+
+                <!-- Quantity of Item -->
+                <TextView
+                    android:id="@+id/quantityValue"
+                    android:layout_width="64dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="28sp">
+                </TextView>
+
+                <!-- Increase button -->
+                <Button
+                    android:id="@+id/increaseButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="+"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textColor="@color/white"
+                    android:clickable="true">
+                </Button>
+
+            </LinearLayout>
+
+            <!-- Submit new item button -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:text="Submit"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:clickable="true">
+            </Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/teal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Items Screen Button -->
+        <Button
+            android:id="@+id/itemsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Items"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+
+        <!-- Add Items Screen Button -->
+        <Button
+            android:id="@+id/addItemButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Add Items"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+
+        <!-- Messages Screen Button -->
+        <Button
+            android:id="@+id/messagesButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Messages"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

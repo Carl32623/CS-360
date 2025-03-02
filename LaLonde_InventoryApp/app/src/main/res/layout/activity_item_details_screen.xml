@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".DetailsActivity">
+
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="680dp"
+            android:clickable="true"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/chest_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- Divider Bar -->
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"/>
+
+        <!-- Item Name -->
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:text="Item Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!-- Item Description -->
+        <TextView
+            android:id="@+id/itemDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/itemName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="Brief Description of the item."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <!-- Divider Bar -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/itemDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Item Quantity Bar -->
+        <LinearLayout
+            android:id="@+id/itemQuantityBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/itemDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Decrease Item Button -->
+            <Button
+                android:id="@+id/decreaseButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:clickable="true"/>
+
+            <!-- Item Quantity -->
+            <TextView
+                android:id="@+id/quantityValue"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="22"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:gravity="center"/>
+
+            <!-- Increase Item Quantity -->
+            <Button
+                android:id="@+id/increaseButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="+"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+        <!-- Update Item Button -->
+        <Button
+            android:id="@+id/updateItemButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/itemQuantityBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:text="Update Item"
+            android:textSize="18sp"
+            android:backgroundTint="@color/teal"
+            android:textColor="@color/white"
+            android:clickable="true"/>
+
+        <!-- Remove Item Button -->
+        <Button
+            android:id="@+id/removeItemButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/updateItemButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:text="Remove Item"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:clickable="true"/>
+
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/teal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Items Screen Button -->
+        <Button
+            android:id="@+id/itemsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Items"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+
+        <!-- Add Items Screen Button -->
+        <Button
+            android:id="@+id/addItemButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Add Items"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+
+        <!-- Messages Screen Button -->
+        <Button
+            android:id="@+id/messagesButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Messages"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

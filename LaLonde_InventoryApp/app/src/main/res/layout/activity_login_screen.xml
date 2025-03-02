@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_background"
+    android:gravity="center_horizontal">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/chest_logo">
+    </ImageView>
+
+    <!-- Title Header -->
+    <TextView
+        android:id="@+id/TitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="SNHU INVENTORY"
+        android:textSize="25sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <!-- Username Text Box -->
+    <EditText
+        android:id="@+id/UserNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="Username"
+        android:inputType="text"
+        android:padding="18dp"
+        android:textColor="@color/black"
+        android:textSize="24sp">
+    </EditText>
+
+    <!-- Password Text Box -->
+    <EditText
+        android:id="@+id/PasswordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corner"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="18dp"
+        android:textColor="@color/black"
+        android:textSize="24sp">
+    </EditText>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textSize="20sp">
+    </Button>
+
+    <!-- Create New Login Button -->
+    <Button
+        android:id="@+id/CreateLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Create New Login"
+        android:textAlignment="center"
+        android:textSize="20sp">
+    </Button>
+
+    <!-- Created By Carl LaLonde -->
+    <TextView
+        android:id="@+id/CreatedBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="Created by Carl LaLonde"
+        android:gravity="center">
+    </TextView>
+
+</LinearLayout>
